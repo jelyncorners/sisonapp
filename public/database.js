@@ -1,3 +1,5 @@
+import { initializeApp } from 'firebase/app';
+
 const firebaseConfig = {
     apiKey: "AIzaSyAPAZZy_saBmo4kioORW7lNnIw3S49b9aY",
   authDomain: "sisonfirebase.firebaseapp.com",
@@ -6,6 +8,9 @@ const firebaseConfig = {
   messagingSenderId: "747239577497",
   appId: "1:747239577497:web:c387388939a73f5627a508"
 };
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 try {
     firebase.initializeApp(firebaseConfig);
